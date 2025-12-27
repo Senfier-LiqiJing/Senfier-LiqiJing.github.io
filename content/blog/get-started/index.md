@@ -1,21 +1,25 @@
 ---
-title: 🎉 Easily create your own simple yet highly customizable blog
+title: 🎉 Unlocking "Free Control" in Chaos - A Compact Multiplier-Oriented Oscillator
 summary: Take full control of your personal brand and privacy by migrating away from the big tech platforms!
 date: 2023-10-27
 
 # Featured image
 # Place an image named `featured.jpg/png` in this page's folder and customize its options here.
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
+  caption: 'Image credit: Adapted from Xu et al., IEEE TCS-II, 2023'
 
 authors:
   - me
-  - Ted
+  - Chunbiao Li
+  - Junyao Wu
+  - Guanrong Chen
+  - Chuang Zhang
 
 tags:
-  - Academic
-  - Hugo Blox
-  - Markdown
+  - Chaos Theory
+  - Analog Circuits
+  - IEEE Publication
+  - Hardware Design
 ---
 
 Welcome 👋
