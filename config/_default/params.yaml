@@ -13,7 +13,7 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   identity:
     # Site name - shown in navbar, footer, copyright, and browser title by default
-    name: "Your Name"
+    name: "Yang Xu"
     # Legal entity for copyright notices (defaults to name if not set)
     organization: ""
     # Schema.org type for structured data
@@ -115,13 +115,12 @@ hugoblox:
   # Legal notices and licensing
   # ────────────────────────────────────────────────────────────────────────────
   copyright:
-    # Copyright notice - supports {year}, {name}, {license} placeholders
-    notice: "© {year} {name}. This work is licensed under {license}"
+    notice: "© {year} {name}. This work is licensed under CC BY-NC-SA 4.0"
     license:
-      type: cc                          # cc | all_rights | custom
-      allow_derivatives: false
-      share_alike: true
-      allow_commercial: false
+      type: cc              
+      allow_derivatives: true   
+      share_alike: true         
+      allow_commercial: false   
 
   # ────────────────────────────────────────────────────────────────────────────
   # SEO

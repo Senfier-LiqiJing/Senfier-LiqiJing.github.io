@@ -84,3 +84,5 @@ sitemap:
   _merge: deep
 minify:
   _merge: deep
+params:
+  show_backlinks: false

@@ -1,0 +1,30 @@
+footer .powered-by,
+footer p:last-of-type {
+    display: none !important;
+}
+
+footer p:nth-last-of-type(2) {
+    display: block !important;
+}
+
+/* 1. 隐藏文章底部实际的 Backlinks 内容区域 */
+#backlinks {
+    display: none !important;
+}
+
+/* 2. 隐藏右侧目录 (Table of Contents) 中的 "Backlinks" 文字 */
+nav#TableOfContents a[href="#backlinks"] {
+    display: none !important;
+}
+
+/* 3. 隐藏 "Backlinks" 下面的子项 (即 "Uses") */
+/* 原理：隐藏 href="#backlinks" 链接后面紧跟的那个列表 (ul) */
+nav#TableOfContents a[href="#backlinks"] + ul {
+    display: none !important;
+}
+
+/* 4. (进阶) 如果你想连列表前面的小圆点或占位空白都彻底删掉 */
+/* 这一行使用了较新的 CSS 语法 :has，现代浏览器都支持 */
+nav#TableOfContents li:has(a[href="#backlinks"]) {
+    display: none !important;
+}

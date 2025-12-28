@@ -1,5 +1,5 @@
 ---
-title: 🎉 Unlocking "Free Control" in Chaos - A Compact Multiplier-Oriented Oscillator
+title: ⚙️ Unlocking "Free Control" in Chaos - A Compact Multiplier-Oriented Oscillator
 summary: Take full control of your personal brand and privacy by migrating away from the big tech platforms!
 date: 2023-10-27
 math: true
@@ -21,7 +21,7 @@ tags:
   - Chaos Theory
   - Analog Circuits
   - IEEE Publication
-  - Hardware Design
+  - Simplified Circuit
 ---
 
 Welcome 👋
