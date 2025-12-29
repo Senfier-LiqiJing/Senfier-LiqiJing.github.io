@@ -1,7 +1,7 @@
 ---
 title: ⚙️ Unlocking "Free Control" in Chaos - A Compact Multiplier-Oriented Oscillator
-summary: Take full control of your personal brand and privacy by migrating away from the big tech platforms!
-date: 2023-10-27
+summary: A deep dive into my research on simplifying chaotic circuits. We achieved independent control of amplitude, frequency, and offset using a novel multiplier-oriented design.
+date: 2023-06-08
 math: true
 profile: false
 
@@ -24,7 +24,7 @@ tags:
   - Simplified Circuit
 ---
 
-Welcome 👋
+Welcome to my project blog 👋
 
 {{< toc mobile_only=true is_open=true >}}
 

@@ -1,135 +1,55 @@
 ---
-title: 🧠 Sharpen your thinking with a second brain
-summary: Create a personal knowledge base and share your knowledge with your peers.
-date: 2023-10-26
+title: '🧬 GenBinder: Flow Matching with Optimal Transport for TCR Binder Design'
+summary: A novel generative pipeline for protein binder design. By leveraging Optimal Transport and Flow Matching, we move beyond standard diffusion models to generate biologically plausible protein structures directly from real distributions.
+date: 2025-09-20
+math: true
+
+# Featured image
+# Place an image named `featured.jpg` or `featured.png` in this page's folder.
+image:
+  caption: 'Image credit: GenBinder Architecture / Project Schematic'
+
 authors:
   - me
+
 tags:
-  - Second Brain
-  - Markdown
-image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
+  - Generative AI
+  - Protein Design
+  - Flow Matching
+  - Optimal Transport
+  - Deep Learning
 ---
 
-Create a personal knowledge base and share your knowledge with your peers.
+{{< toc mobile_only=true is_open=true >}}
 
-Hugo Blox web framework empowers you with one of the most flexible note-taking capabilities out there.
+<div style="text-align: justify;">
 
-Create a powerful knowledge base that works on top of a local folder of plain text Markdown files.
+## Overview
 
-Use it as your second brain, either publicly sharing your knowledge with your peers via your website, or via a private GitHub repository and password-protected site just for yourself.
+Protein binder design is a challenging task that requires navigating a vast chemical space to find structures that bind specifically to a target. While diffusion models have shown promise, they often rely on denoising from Gaussian noise, which can be inefficient for modeling highly structured biological data.
 
-## Mindmaps
+**GenBinder** is a new project where I developed an end-to-end generative pipeline for T-cell receptor (TCR) binder design. The key innovation is formulating the generation process as an **Optimal Transport (OT)** problem between real biological distributions, rather than starting from random noise.
 
-Hugo Blox supports a Markdown extension for mindmaps.
+## Key Methodology
 
-With this open format, can even edit your mindmaps in other popular tools such as Obsidian.
+### 1. Flow Matching with Optimal Transport
+Instead of standard diffusion, GenBinder uses **Flow Matching** to model binder generation. We define the generation as a structured transport process:
+* **Source:** Distributions of existing TCRs and natural binders.
+* **Target:** The specific binder distribution required for the antigen.
 
-Simply insert a Markdown code block labelled as `markmap` and optionally set the height of the mindmap as shown in the example below.
+This "real-to-real" transport approach aims to be more biologically grounded than "noise-to-real" methods, potentially leading to higher quality candidates.
 
-Mindmaps can be created by simply writing the items as a Markdown list within the `markmap` code block, indenting each item to create as many sub-levels as you need:
+### 2. Sequence-Structure Coupled Training
+A protein's function is inextricably partial to both its 3D geometry and its amino acid sequence. To address this, I implemented a **sequence-structure coupled training framework**. This ensures that the generated backbone geometries are compatible with their sequences, and the system features modular loss components to allow for flexible ablation studies and future extensions.
 
-<div class="highlight">
-<pre class="chroma">
-<code>
-```markmap {height="200px"}
-- Hugo Modules
-  - Hugo Blox
-  - blox-plugins-netlify
-  - blox-plugins-netlify-cms
-  - blox-plugins-reveal
-```
-</code>
-</pre>
+## Physically Motivated Constraints
+
+To ensure the generated proteins are not just mathematically optimal but physically viable, I designed and integrated **physically motivated structural losses**.
+
+These include specific **helicity-based geometric constraints** to encourage the formation of realistic secondary structures (like $\alpha$-helices) and avoid biologically implausible conformations.
+
+## Project Status
+
+The project currently has a **fully runnable training and evaluation pipeline**. I am currently working on integrating larger datasets and establishing comprehensive benchmarks to further validate the model's performance against state-of-the-art methods.
+
 </div>
-
-renders as
-
-```markmap {height="200px"}
-- Hugo Modules
-  - Hugo Blox
-  - blox-plugins-netlify
-  - blox-plugins-netlify-cms
-  - blox-plugins-reveal
-```
-
-Anh here's a more advanced mindmap with formatting, code blocks, and math:
-
-<div class="highlight">
-<pre class="chroma">
-<code>
-```markmap
-- Mindmaps
-  - Links
-    - [Hugo Blox Docs](https://docs.hugoblox.com/)
-    - [Discord Community](https://discord.gg/z8wNYzb)
-    - [GitHub](https://github.com/HugoBlox/hugo-blox-builder)
-  - Features
-    - Markdown formatting
-    - **inline** ~~text~~ *styles*
-    - multiline
-      text
-    - `inline code`
-    -
-      ```js
-      console.log('hello');
-      console.log('code block');
-      ```
-    - Math: $x = {-b \pm \sqrt{b^2-4ac} \over 2a}$
-```
-</code>
-</pre>
-</div>
-
-renders as
-
-```markmap
-- Mindmaps
-  - Links
-    - [Hugo Blox Docs](https://docs.hugoblox.com/)
-    - [Discord Community](https://discord.gg/z8wNYzb)
-    - [GitHub](https://github.com/HugoBlox/hugo-blox-builder)
-  - Features
-    - Markdown formatting
-    - **inline** ~~text~~ *styles*
-    - multiline
-      text
-    - `inline code`
-    -
-      ```js
-      console.log('hello');
-      console.log('code block');
-      ```
-    - Math: $x = {-b \pm \sqrt{b^2-4ac} \over 2a}$
-```
-
-## Highlighting
-
-<mark>Highlight</mark> important text with `mark`:
-
-```html
-<mark>Highlighted text</mark>
-```
-
-## Callouts
-
-Use [callouts](https://docs.hugoblox.com/reference/markdown/#callouts) (aka _asides_, _hints_, or _alerts_) to draw attention to notes, tips, and warnings.
-
-Use the `> [!NOTE]` syntax to create a callout.
-
-```markdown
-> [!NOTE]
-> A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
-```
-
-renders as
-
-> [!NOTE]
-> A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
-
-Or use the `warning` callout type so your readers don't miss critical details:
-
-> [!WARNING]
-> A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
-
-## Did you find this page helpful? Consider sharing it 🙌
