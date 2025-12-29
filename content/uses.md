@@ -1,26 +1,46 @@
 ---
-title: Uses
-date: 2023-10-24
-hide_date: true
-reading_time: false
+title: Education
+date: 2025-12-29
+summary: Academic background, patents, and honors of Yang Xu.
+
+# Optional: Disable comments for this page
+commentable: false
 ---
 
-The idea of a Uses page is to tell you about the stuff I use.
+## 🎓 Academic History
 
-Make sure to check out [uses.tech](https://uses.tech/) for a list of everyone's Uses pages!
+### **Master of Science in Applied Data Science**
+**University of Southern California** | *Aug 2025 - Present*
+* **School:** Viterbi School of Engineering
+* **Current Research:** GenBinder - Flow Matching with Optimal Transport for TCR Binder Design
 
-I often get asked about what software or hardware I use, so this page will serve as a living document and a place to point curious readers to when I get asked.
+### **Bachelor of Engineering in Artificial Intelligence**
+**Nanjing University of Information Science and Technology** | *Sep 2020 - Jun 2024*
+* **GPA:** 3.619
+* **Ranking:** Top 15% (14/96)
+* **Honors:** Outstanding Graduate (2024)
 
-## Website
+---
 
-- [Hugo Blox](https://hugoblox.com) (see the tutorial on [Getting Started](/blog/get-started/))
+## 📝 Patents & Software Copyrights
 
-## Editor + Terminal
+* **A Non-Operational Amplifier Chaotic Waveform Generator**
+    *China Patent No. CN116155242B (2023)*
+* **A Pressure Stability Monitoring Circuit based on Chaotic System**
+    *China Patent No. CN115979471A (2023)*
+* **A Control and Selection Circuit based on Junction Field-Effect Transistor**
+    *China Patent No. ZL 202222192075.7 (2023)*
+* **Analog Selector Module Based on Open-Drain Output**
+    *China Patent No. CN116112001A (2023)*
+* **Artificial Intelligence Detection and Recognition System V1.0**
+    *Computer Software Copyright No. 2022SR0859053 (2022)*
 
-- [Visual Studio Code](https://code.visualstudio.com/) is my current editor
-- Chrome is my main browser
-- iTerm2 is my terminal
+---
 
-## Desktop Apps
+## 🏆 Awards & Honors
 
-- Better Touch Tool for window management and custom keyboard shortcuts
+* **Merit Student**, NUIST (2020-2024, Four Consecutive Years)
+* **Outstanding Student Cadre**, NUIST (2020-2024)
+* **First Class Scholarship**, NUIST (2022-2023)
+* **Third Class Scholarship**, NUIST (2020-2022)
+* **Outstanding Youth League Cadre** (2022-2023)

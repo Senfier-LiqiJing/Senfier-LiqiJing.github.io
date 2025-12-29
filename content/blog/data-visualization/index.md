@@ -1,157 +1,58 @@
 ---
-title: 📈 Communicate your results effectively with the best data visualizations
-summary: Use popular tools such as Plotly, Mermaid, and data frames.
-date: 2023-10-25
+title: 'Image Generation with High-Speed Inference Using ControlNet based on Diffusers'
+summary: A project focusing on optimizing generative AI pipelines. We achieved 3x faster inference and reduced VRAM usage by 40% through memory-efficient engineering and advanced fine-tuning strategies like LoRA and DreamBooth.
+date: 2022-09-20
+math: true
+
+# Featured image
+# Place an image named `featured.jpg` or `featured.png` in this page's folder.
+image:
+  caption: 'Image credit: ControlNet Generation Samples'
+
 authors:
   - me
+
 tags:
-  - Hugo
-  - Hugo Blox
-  - Markdown
-image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
+  - Computer Vision
+  - Generative AI
+  - ControlNet
+  - Diffusion Models
+  - Model Optimization
 ---
 
-Hugo Blox is designed to give technical content creators a seamless experience. You can focus on the content and Hugo Blox handles the rest.
+<span style="font-family: 'Courier New', Courier, monospace; font-size: 0.9em; color: #555;">
+Note: This article presents a course project on optimizing generative AI inference pipelines.
+</span>
 
-Use popular tools such as Plotly, Mermaid, and data frames.
+{{< toc mobile_only=true is_open=true >}}
 
-## Charts
+<div style="text-align: justify;">
 
-Hugo Blox supports the popular [Plotly](https://plot.ly/) format for interactive data visualizations. With Plotly, you can design almost any kind of visualization you can imagine!
+## Overview
 
-Save your Plotly JSON in your page folder, for example `line-chart.json`, and then add the `{{</* chart data="line-chart" */>}}` shortcode where you would like the chart to appear.
+Generative AI models, particularly diffusion models, have demonstrated incredible capabilities in image synthesis. However, their practical deployment is often hindered by high latency and massive memory requirements.
 
-Demo:
+This project focused on implementing and optimizing state-of-the-art generative models with conditional controls. By leveraging the **Diffusers** library and **ControlNet**, I aimed to significantly enhance inference speed and reduce resource consumption without compromising image quality.
 
-{{< chart data="line-chart" >}}
+## Performance Optimization
 
-You might also find the [Plotly JSON Editor](http://plotly-json-editor.getforge.io/) useful.
+The core achievement of this project was optimizing the inference pipeline for resource-constrained environments.
 
-## Diagrams
+### 1. High-Speed Inference
+I implemented memory-efficient inference pipelines that drastically improved performance benchmarks. By optimizing the processing flow, the system achieved **3x faster inference speeds** compared to the standard baseline.
 
-Hugo Blox supports the _Mermaid_ Markdown extension for diagrams.
+### 2. Memory Efficiency
+To address the VRAM bottlenecks common in large diffusion models, I engineered optimizations that **reduced VRAM usage by 40%**. This included the implementation of grid visualization techniques, allowing for efficient batch processing and previewing.
 
-An example **flowchart**:
+## Advanced Training Strategies
 
-    ```mermaid
-    graph TD
-    A[Hard] -->|Text| B(Round)
-    B --> C{Decision}
-    C -->|One| D[Result 1]
-    C -->|Two| E[Result 2]
-    ```
+Beyond inference optimization, I explored advanced methodologies to enhance model control and personalization:
 
-renders as
+* **Transfer Learning & Fine-tuning:** I developed an innovative training methodology for ControlNet by leveraging transfer learning from pre-trained diffusion models.
+* **Personalization:** I applied cutting-edge fine-tuning strategies, including **DreamBooth** and **LoRA (Low-Rank Adaptation)**, to create highly personalized generative models.
 
-```mermaid
-graph TD
-A[Hard] -->|Text| B(Round)
-B --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
+## Evaluation
 
-An example **sequence diagram**:
+To ensure the optimizations did not degrade output quality, I created a comprehensive evaluation framework. This allowed for the quantitative assessment of both image quality and control accuracy, ensuring that the speed gains were achieved while maintaining high-fidelity generation.
 
-    ```mermaid
-    sequenceDiagram
-    Alice->>John: Hello John, how are you?
-    loop Healthcheck
-        John->>John: Fight against hypochondria
-    end
-    Note right of John: Rational thoughts!
-    John-->>Alice: Great!
-    John->>Bob: How about you?
-    Bob-->>John: Jolly good!
-    ```
-
-renders as
-
-```mermaid
-sequenceDiagram
-Alice->>John: Hello John, how are you?
-loop Healthcheck
-    John->>John: Fight against hypochondria
-end
-Note right of John: Rational thoughts!
-John-->>Alice: Great!
-John->>Bob: How about you?
-Bob-->>John: Jolly good!
-```
-
-An example **class diagram**:
-
-    ```mermaid
-    classDiagram
-    Class01 <|-- AveryLongClass : Cool
-    Class03 *-- Class04
-    Class05 o-- Class06
-    Class07 .. Class08
-    Class09 --> C2 : Where am i?
-    Class09 --* C3
-    Class09 --|> Class07
-    Class07 : equals()
-    Class07 : Object[] elementData
-    Class01 : size()
-    Class01 : int chimp
-    Class01 : int gorilla
-    Class08 <--> C2: Cool label
-    ```
-
-renders as
-
-```mermaid
-classDiagram
-Class01 <|-- AveryLongClass : Cool
-Class03 *-- Class04
-Class05 o-- Class06
-Class07 .. Class08
-Class09 --> C2 : Where am i?
-Class09 --* C3
-Class09 --|> Class07
-Class07 : equals()
-Class07 : Object[] elementData
-Class01 : size()
-Class01 : int chimp
-Class01 : int gorilla
-Class08 <--> C2: Cool label
-```
-
-An example **state diagram**:
-
-    ```mermaid
-    stateDiagram
-    [*] --> Still
-    Still --> [*]
-    Still --> Moving
-    Moving --> Still
-    Moving --> Crash
-    Crash --> [*]
-    ```
-
-renders as
-
-```mermaid
-stateDiagram
-[*] --> Still
-Still --> [*]
-Still --> Moving
-Moving --> Still
-Moving --> Crash
-Crash --> [*]
-```
-
-## Data Frames
-
-Save your spreadsheet as a CSV file in your page's folder and then render it by adding the _Table_ shortcode to your page:
-
-```go
-{{</* table path="results.csv" header="true" caption="Table 1: My results" */>}}
-```
-
-renders as
-
-{{< table path="results.csv" header="true" caption="Table 1: My results" >}}
-
-## Did you find this page helpful? Consider sharing it 🙌
+</div>
